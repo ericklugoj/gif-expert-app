@@ -4,13 +4,13 @@ import PropTypes from 'prop-types';
 const AddCategory = ({ setCategories }) => {
 	const [inputValue, setInputValue] = useState('');
 
-	const handleChange = (event) => {
-		const text = event.target.value;
-		setInputValue(text);
+	const handleInputChange = (event) => {
+		setInputValue(event.target.value);
 	};
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
+
 		if (inputValue.trim().length > 2) {
 			setCategories((prevState) => [inputValue, ...prevState]); // Cuando se pasa como callback regresa el estado anterior
 			setInputValue('');
@@ -19,7 +19,8 @@ const AddCategory = ({ setCategories }) => {
 
 	return (
 		<form onSubmit={handleSubmit}>
-			<input type='text' value={inputValue} onChange={handleChange} />
+			<p>{inputValue}</p>
+			<input type='text' value={inputValue} onChange={handleInputChange} />
 		</form>
 	);
 };

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <GifGrid/> Debe de mostrarse correctamente 1`] = `
+<Fragment>
+  <h3
+    className="animate__animated animate__bounceIn"
+  >
+    naruto
+  </h3>
+  <p>
+    Loading...
+  </p>
+  <div
+    className="card-grid"
+  />
+</Fragment>
+`;
